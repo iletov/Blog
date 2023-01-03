@@ -4,7 +4,7 @@ import smtplib
 
 posts = requests.get('https://api.npoint.io/94b853fbe051632b1847').json()
 USER = "letov88@gmail.com"
-PASSWORD = "yftyvmugjhffvepk"
+PASSWORD = "passwod"
 
 app = Flask(__name__)
 
