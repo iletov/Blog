@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% import "bootstrap/wtf.html" as wtf %}
+    {% include 'header.html' %}
+</head>
+<body>
+<!-- Page Header-->
+<header class="masthead" style="background-image: url('static/assets/img/write.jpg')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="page-heading">
+                    {% if is_edit: %}
+                    <h1>Edit Post</h1>
+                    {% else: %}
+                    <h1>New Post</h1>
+                    {% endif %}
+                    <span class="subheading">Write without fear!</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Main Content-->
+<main class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                {{ ckeditor.load() }}
+                {{ ckeditor.config(name='body') }}
+                {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+            </div>
+        </div>
+    </div>
+</main>
+<!-- Footer-->
+
+{% include 'footer.html' %}
+</body>
+</html>
