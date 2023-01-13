@@ -1,9 +1,5 @@
-# Blog created with:
+# Flask Blog Application:
+This is a social/blog application developed with Flask. Users can create profiles, add, edit and delete own posts. Also can make comments on other users posts.
+In the contact page users can send emails directly to the owner of the blog.
 
-- Python(Flask)
-- HTML
-- CSS
-- JavaScript
-- Bootstrap
-
-In this blog I`m using HTML Forms to work with the Flask server and get hold of the data that a user enters into the form.
+# Features
