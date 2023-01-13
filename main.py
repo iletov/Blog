@@ -11,7 +11,7 @@ from datetime import date
 from forms import *
 import smtplib
 
-USER = "letov88@gmail.com"
+USER = "email"
 PASSWORD = "passwod"
 
 app = Flask(__name__)
