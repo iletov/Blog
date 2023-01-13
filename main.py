@@ -28,7 +28,7 @@ gravatar = Gravatar(app,
                     use_ssl=False,
                     base_url=None)
 
-postgres://posts_nqft_user:DItdqoyWJ3HavFaRsPWJbPVPONzYx3eh@dpg-cf0rj8ha6gdm8jq1jgdg-a/posts_nqft
+
 ##CONNECT TO DB
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://posts_nqft_user:DItdqoyWJ3HavFaRsPWJbPVPONzYx3eh@dpg-cf0rj8ha6gdm8jq1jgdg-a/posts_nqft'
