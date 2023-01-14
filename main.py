@@ -10,6 +10,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import date
 from forms import *
 import smtplib
+import psycopg2
 import os
 
 USER = os.environ.get("USER")
