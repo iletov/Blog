@@ -48,7 +48,7 @@ class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(100), unique=True, nullable=False)
     email = db.Column(db.String(100), unique=True, nullable=False)
-    password = db.Column(db.String(250), nullable=False)
+    password = db.Column(db.String, nullable=False)
     #User can have many posts
     posts = relationship('BlogPost', back_populates='author')
     comments = relationship('Comment', back_populates='comment_author')
@@ -82,7 +82,7 @@ class Comment(db.Model):
 
 
 # with app.app_context():
-#     db.create_all()
+db.create_all()
 
 
 def admin_only(function):
@@ -220,7 +220,7 @@ def register():
             flash("The email is already in use!")
             return redirect(url_for('login'))
 
-        hashed_password = generate_password_hash(form.password.data, method='pbkdf2:sha256')
+        hashed_password = generate_password_hash(method='sha256', form.password.data)
         new_user = User(username=form.username.data,
                         email=form.email.data,
                         password=hashed_password)
