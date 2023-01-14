@@ -1,5 +1,16 @@
 # Flask Blog Application:
-This is a social/blog application developed with Flask. Users can create profiles, add, edit and delete own posts. Also can make comments on other users posts.
-In the contact page users can send emails directly to the owner of the blog.
+An End-to-End application developed with Flask.
 
 # Features
+- Registration form for users to creat a profile. Every user can create, edit and delete own posts and comment other users posts.
+- Passwords are securely encoded with hashing
+- User authentication is done with flask_login.
+- Everyybody can get in contact with the owner by sending email over a SMTP client session object.
+
+# Topics
+- Python, HTML, CSS, Bootstrap, SQL
+- Flask Web Framework (using WTForms)
+- SQL Databases
+- OOP
+- Decorators
+- Functions
