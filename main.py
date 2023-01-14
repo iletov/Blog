@@ -48,7 +48,7 @@ class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(100), unique=True, nullable=False)
     email = db.Column(db.String(100), unique=True, nullable=False)
-    password = db.Column(db.LargeBinary, nullable=False)
+    password = db.Column(db.String(100), nullable=False)
     #User can have many posts
     posts = relationship('BlogPost', back_populates='author')
     comments = relationship('Comment', back_populates='comment_author')
@@ -81,7 +81,7 @@ class Comment(db.Model):
     text = db.Column(db.Text, nullable=False)
 
 
-# with app.app_context():
+with app.app_context():
 db.create_all()
 
 
