@@ -233,13 +233,13 @@ def register():
 
 
 @app.route("/about")
-@login_required
+# @login_required
 def about():
     return render_template('about.html')
 
 
 @app.route("/contact", methods=["GET", "POST"])
-@login_required
+# @login_required
 def contact():
     if request.method == 'POST':
         data = request.form
